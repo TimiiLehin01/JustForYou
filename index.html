@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Love ❤️</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <div class="section active" id="bottle-section">
+      <div class="beach-scene">
+        <div class="bottle" id="bottle">
+          <div class="bottle-cap"></div>
+          <div class="bottle-glow"></div>
+        </div>
+      </div>
+      <p class="instruction">
+        Valentine? nah i have something better <br />
+        Click on the bottle to open a lil surprise... 💕
+      </p>
+    </div>
+
+    <div class="particles" id="particles"></div>
+
+    <div class="section" id="gift-section">
+      <div class="gift-container">
+        <div class="gift-box" id="giftBox">
+          <div class="gift-bow">🎀</div>
+          <div class="gift-body">
+            <div class="gift-shine"></div>
+            🎁
+          </div>
+        </div>
+        <h2 class="gift-title">You Have A Gift...</h2>
+        <div class="gift-preview">
+          <p class="gift-intro">Inside this box, you'll find:</p>
+          <div class="gift-items">
+            <div class="gift-item">Surprisesss</div>
+            <div class="gift-item">💖 Reasons why I adore you</div>
+            <div class="gift-item">More Surprisesss</div>
+            <div class="gift-item">❤️ A message from my heart</div>
+          </div>
+          <p class="gift-question">Ready to unwrap it?</p>
+        </div>
+        <button class="gift-button" id="openGift">Let's Go!🎀</button>
+      </div>
+    </div>
+
+    <div class="section" id="polaroid-section">
+      <div style="width: 100%">
+        <h2 class="section-title">Your Moments 📸</h2>
+        <p
+          style="
+            text-align: center;
+            color: #8b4571;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+          "
+        >
+          Click each media to see what's on it...
+        </p>
+        <div class="polaroid-container" id="polaroidContainer"></div>
+        <div style="text-align: center; margin-top: 40px">
+          <button class="next-button" onclick="showSection('hearts-section')">
+            More Love Ahead 💕
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="hearts-section">
+      <div
+        style="width: 100%; text-align: center; z-index: 10; position: relative"
+      >
+        <h2 class="section-title">Catch A Balloon! 🎈</h2>
+        <p class="balloon-instruction">
+          Let's take a break here to prepare you for what's ahead <br /><br />
+          pop as many ballons as yo can pop because it's your special day (p.s:
+          avoid the bricks)
+        </p>
+        <button
+          class="next-button"
+          onclick="showSection('notes-section')"
+          style="margin-top: 30px"
+        >
+          Ready for what's next?
+        </button>
+      </div>
+      <div class="balloons-container" id="balloonsContainer"></div>
+    </div>
+
+    <div class="balloon-overlay" id="balloonOverlay"></div>
+    <div class="balloon-message-popup" id="balloonPopup">
+      <h3 id="balloonMessageTitle">💖</h3>
+      <p id="balloonMessageText"></p>
+      <button class="balloon-close-btn" onclick="closeBalloonMessage()">
+        Sweet! 💕
+      </button>
+    </div>
+
+    <div class="section" id="notes-section">
+      <div style="width: 100%; text-align: center">
+        <h2 class="section-title">Love Notes For You 💌</h2>
+        <p style="color: #8b4571; margin-bottom: 30px; font-size: 1.1em">
+          Each note holds a piece of my heart...
+        </p>
+        <div class="notes-container" id="notesContainer"></div>
+        <button
+          class="next-button"
+          onclick="showSection('final-section')"
+          style="margin-top: 50px"
+        >
+          From my 💗 to your 👀...
+        </button>
+      </div>
+    </div>
+
+    <div class="section" id="final-section">
+      <h2 class="final-title">For You, My Love 💕</h2>
+      <div class="final-heart" id="finalHeart">❤️</div>
+      <div class="final-message" id="finalMessage">
+        You are the sunshine that brightens my darkest days, the melody in my
+        heart's song, and the dream I never want to wake up from.
+        <br /><br />
+        Every moment with you is a treasure, every smile you give me is a gift,
+        and every day I fall more deeply in love with you.
+        <br /><br />
+        This Valentine's Day and every day after, I want you to know: You are my
+        forever, my always, my everything.
+        <br /><br />
+        <strong>I love you more than words can ever express. ❤️</strong>
+        <br /><br />
+        Happy Valentine's Day, My Asake! 💖✨
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
