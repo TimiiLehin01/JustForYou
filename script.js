@@ -57,11 +57,14 @@ const polaroidData = [
 
 document.getElementById("mainCard").addEventListener("click", function () {
   this.classList.add("card-open");
-  document
-    .getElementById("bgMusic")
-    ?.play()
-    .catch(() => {});
-
+  const audio = document.getElementById("bgMusic");
+  if (audio) {
+    // START AT A SPECIFIC TIME (e.g., 45 seconds)
+    audio.currentTime = 11;
+    audio.play().catch(() => {
+      console.log("Autoplay was prevented by browser");
+    });
+  }
   setTimeout(() => {
     const wrapper = document.getElementById("card-wrapper");
     wrapper.style.opacity = "0";
@@ -188,7 +191,7 @@ function createHearts() {
   const container = document.getElementById("floatingHearts");
   setInterval(() => {
     const el = document.createElement("div");
-    const items = ["❤️", "💖", "✨", "Asake"];
+    const items = ["❤️", "💖", "✨", "💍", "🎈", "🌹", "Asake"];
     el.innerHTML = items[Math.floor(Math.random() * items.length)];
     el.style.position = "fixed";
     el.style.left = Math.random() * 100 + "vw";
